@@ -1,29 +1,78 @@
-#header{
-  margin: auto;
-  width: 800px;
+
+:host{
+  position:fixed;
+  width: 100%;
 }
-#topBar {
-  width: 800px;
+
+#header {
   margin: auto;
-  min-height: 40px;
   overflow: hidden;
 }
 
-#login {
-  width: 300px;
-  float: left;
+@media only screen and (min-width: 992px) {
+  #header {
+    width: 60%;
+    margin: auto;
+    overflow: hidden;
+  }
 }
+@media only screen and (min-width: 992px) {
+  #topBar {
+    clear: both;
+    width: 60%;
+    margin: auto;
+    min-height: 40px;
+  }
+}
+
+#topBar {
+  width: 100%;
+  margin: auto;
+  min-height: 40px;
+}
+
+@media only screen and (min-width: 992px) {
+  #topBar {
+    width: 60%;
+    margin: auto;
+    min-height: 40px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #login {
+    margin: auto;
+    width: 20%;
+    padding: 10px;
+  }
+}
+
+#login {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  }
 
 #register {
-  float: right;
+  float: left;
+  width: 50%;
+  padding: 10px;
 }
-
 #logout{
   float: right;
 }
 
 #messageList {
+  clear: both;
+  width: 100%;
   margin: auto;
-  width: 800px;
-  border: 2px darkslateblue;
 }
+
+@media only screen and (min-width: 992px) {
+  #messageList {
+    clear: both;
+    width: 60%;
+    margin: auto;}
+}
+
+

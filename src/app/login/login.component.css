@@ -8,19 +8,16 @@ a {
   color: darkslateblue;
   background: #dbf1eb;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: 300px;
   text-decoration: none;
   font-size: x-large;
 }
 
 #username {
-  width: 200px;
   height: 20px;
   border: 1px solid aquamarine;
 }
 
 #password {
-  width: 200px;
   height: 20px;
   border: 1px solid aquamarine;
 }
