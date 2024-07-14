@@ -1,19 +1,16 @@
 
 :host{
-  position:fixed;
   width: 100%;
 }
 
 #header {
   margin: auto;
-  overflow: hidden;
 }
 
 @media only screen and (min-width: 992px) {
   #header {
     width: 60%;
     margin: auto;
-    overflow: hidden;
   }
 }
 @media only screen and (min-width: 992px) {
