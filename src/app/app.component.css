@@ -1,0 +1,29 @@
+#header{
+  margin: auto;
+  width: 800px;
+}
+#topBar {
+  width: 800px;
+  margin: auto;
+  min-height: 40px;
+  overflow: hidden;
+}
+
+#login {
+  width: 300px;
+  float: left;
+}
+
+#register {
+  float: right;
+}
+
+#logout{
+  float: right;
+}
+
+#messageList {
+  margin: auto;
+  width: 800px;
+  border: 2px darkslateblue;
+}

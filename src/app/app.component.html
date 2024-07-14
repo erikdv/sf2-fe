@@ -1,0 +1,13 @@
+<div id="header">
+<app-header></app-header>
+</div>
+<div id="topBar">
+  <app-login id="login" *ngIf="!authServive.isLoggedIn()"></app-login>
+  <app-register id="register" *ngIf="!authServive.isLoggedIn()"></app-register>
+  <app-logout id="logout" *ngIf="authServive.isLoggedIn()"></app-logout>
+  <app-send *ngIf="authServive.isLoggedIn()"></app-send>
+</div>
+<div id="messageList">
+  <app-messages></app-messages>
+</div>
+

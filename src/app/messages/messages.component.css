@@ -1,0 +1,14 @@
+
+tr {
+  color: darkslateblue;
+  text-align: center;
+  background: #dbf1eb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#title{
+  width: 200px;
+}
+#content{
+  width: 600px;
+}
+

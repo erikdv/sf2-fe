@@ -1,0 +1,12 @@
+<a routerLink="/" (click)="onLoginClick();">Login</a>
+<form *ngIf="showLoginFields" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div>
+    <input id="username" type="text" placeholder="Username" formControlName="username" />
+  </div>
+  <div >
+    <input id="password" type="password" placeholder="Password" formControlName="password" />
+  </div>
+  <div>
+    <button class="button" type="submit">Sign In</button>
+  </div>
+</form>
