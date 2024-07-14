@@ -6,6 +6,8 @@
     <tr *ngFor="let message of messages">
         <td id="title">{{message.title}}</td>
         <td id="content">{{message.content}}</td>
+        <td id="author">{{message.author}}</td>
+        <td id="createdAt">{{ message.createdAt ? formatDate(message.createdAt) : "-" }}</td>
     </tr>
     <tr>
 </table>

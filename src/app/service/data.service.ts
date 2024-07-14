@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 interface Message {
   title: string;
   content: string;
+  author: string;
+  createdAt: Date;
 }
 
 @Injectable({
@@ -15,7 +17,7 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  getAllPosts(): Observable<Message[]> {
+  getAllMessages(): Observable<Message[]> {
     return this.http.get<Message[]>(this.apiUrl);
   }
 }

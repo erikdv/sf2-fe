@@ -9,6 +9,12 @@ tr {
   width: 200px;
 }
 #content{
-  width: 600px;
+  width: 400px;
 }
+
+#createdAt{
+  width: 100px;
+}
+
+
 

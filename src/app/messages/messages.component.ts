@@ -16,13 +16,14 @@ export class MessagesComponent {
   messages: Message[] = [];
   errorMessage!: string;
 
-  constructor(private data_service: DataService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.data_service.getAllPosts().subscribe({
-      next: (posts) => {
-        this.messages = posts;
-        console.log(this.messages);
+    this.dataService.getAllMessages().subscribe({
+      next: (messages) => {
+        this.messages = messages.sort((a, b) => {
+          return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+        }).reverse();
       },
       error: (error) => {
         this.errorMessage = error;
@@ -30,4 +31,15 @@ export class MessagesComponent {
     });
   }
 
+  options: Intl.DateTimeFormatOptions = {
+    hour: '2-digit',
+    minute: '2-digit',
+    month: '2-digit',
+    day: '2-digit',
+  };
+
+  formatDate(date: Date): string {
+    date = new Date(date);
+    return date.toLocaleString("nl-NL", this.options).replace(",", "");
+  }
 }
