@@ -1,15 +1,9 @@
 <table id="messageTable">
-    <tr>
-        <th>title</th>
-        <th>content</th>
-        <th>author</th>
-        <th>created</th>
-    </tr>
+
     <tr *ngFor="let message of messages">
-        <td id="title">{{message.title}}</td>
-        <td id="content">{{message.content}}</td>
-        <td id="author">{{message.author}}</td>
-        <td id="createdAt">{{ message.createdAt ? formatDate(message.createdAt) : "-" }}</td>
+        <div>
+          <app-message [message]=message />
+        </div>
     </tr>
     <tr>
 </table>

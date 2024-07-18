@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { DataService } from '../service/data.service';
 import { Message} from "./models/message";
 import {NgForOf} from "@angular/common";
+import {MessageComponent} from "../message/message.component";
 
 @Component({
   selector: 'app-messages',
   standalone: true,
   imports: [
-    NgForOf
+    NgForOf,
+    MessageComponent
   ],
   templateUrl: './messages.component.html',
   styleUrl: './messages.component.css'
@@ -31,15 +33,4 @@ export class MessagesComponent {
     });
   }
 
-  options: Intl.DateTimeFormatOptions = {
-    hour: '2-digit',
-    minute: '2-digit',
-    month: '2-digit',
-    day: '2-digit',
-  };
-
-  formatDate(date: Date): string {
-    date = new Date(date);
-    return date.toLocaleString("nl-NL", this.options).replace(",", "");
-  }
 }

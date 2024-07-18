@@ -1,11 +1,4 @@
 
-tr {
-  color: darkslateblue;
-  text-align: center;
-  background: #dbf1eb;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 #messageTable{
   table-layout: fixed;
   width: 100%;
