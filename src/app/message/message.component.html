@@ -1,0 +1,14 @@
+<div id="message">
+  <div  id="title">
+    <a  id="title-link" routerLink="/" (click)="showMessageContent();">{{ message?.title }}</a>
+  </div>
+  <div *ngIf="showContent" id="content">
+    {{ message?.content }}
+  </div>
+  <div id="author">
+    {{ message?.author }}
+  </div>
+  <div id="createdAt">
+    {{ message ? formatDate(message.createdAt) : "-" }}
+  </div>
+</div>
