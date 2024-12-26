@@ -12,7 +12,7 @@ import {NgIf} from "@angular/common";
   standalone: true,
   imports: [ReactiveFormsModule, RouterLink, FormsModule, NgIf],
 })
-export class LogicComponent {
+export class LoginComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
 
