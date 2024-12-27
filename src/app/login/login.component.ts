@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import {Component, EventEmitter, inject, Input, Output, output} from '@angular/core';
 import {FormBuilder, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {RouterLink} from '@angular/router';
 import {AuthResponseInterface} from "../authresponse.interface";
@@ -15,8 +15,9 @@ import {NgIf} from "@angular/common";
 export class LoginComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
+  @Input({required: true}) showLoginFields!: boolean;
+  @Output() select = new EventEmitter()
 
-  showLoginFields = false;
 
   form = this.fb.nonNullable.group({
     username: ['', Validators.required],
@@ -24,7 +25,8 @@ export class LoginComponent {
   });
 
   onLoginClick(): void {
-    this.showLoginFields = !this.showLoginFields;
+      this.select.emit(true)
+      this.showLoginFields = true;
   }
 
   onSubmit(): void {

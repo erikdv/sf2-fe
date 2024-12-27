@@ -19,4 +19,16 @@ import {LogoutComponent} from "./logout/logout.component";
 export class AppComponent {
   authServive = inject(AuthService);
   title = 'sf2-fe';
+  showLogin = false
+  showRegister = false
+
+  onSelectRegister(register: boolean) {
+    this.showRegister = true
+    this.showLogin = false
+  }
+
+  onSelectLogin(login: boolean) {
+    this.showLogin = true
+    this.showRegister = false
+  }
 }

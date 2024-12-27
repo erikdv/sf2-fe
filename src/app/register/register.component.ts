@@ -1,4 +1,4 @@
-import {Component, inject} from '@angular/core';
+import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {RouterLink} from "@angular/router";
@@ -18,6 +18,9 @@ import {NgIf} from "@angular/common";
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
+  @Input({required: true}) showRegisterFields!: boolean;
+  @Output() select = new EventEmitter()
+
   fb = inject(FormBuilder);
   http = inject(HttpClient);
 
@@ -26,10 +29,9 @@ export class RegisterComponent {
     password: ['', Validators.required],
   });
 
-  showRegisterFields = false;
-
-  onLoginClick(): void {
-    this.showRegisterFields = !this.showRegisterFields;
+  onRegisterClick(): void {
+      this.select.emit(true)
+      this.showRegisterFields = true;
   }
   onSubmit(): void {
     this.http
