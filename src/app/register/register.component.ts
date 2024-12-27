@@ -27,10 +27,10 @@ export class RegisterComponent {
     password: ['', Validators.required],
   });
 
-  showLoginFields = false;
+  showRegisterFields = false;
 
   onLoginClick(): void {
-    this.showLoginFields = !this.showLoginFields;
+    this.showRegisterFields = !this.showRegisterFields;
   }
   onSubmit(): void {
     this.http

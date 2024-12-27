@@ -1,7 +1,7 @@
 <div id="create">
   <a routerLink="/" (click)="onLoginClick();">Create account</a>
 </div>
-<form *ngIf="showLoginFields"  [formGroup]="form" (ngSubmit)="onSubmit()">
+<form *ngIf="showRegisterFields" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div>
     <input id="username" type="text" placeholder="Username" formControlName="username" />
   </div>
