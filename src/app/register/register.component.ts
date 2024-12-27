@@ -21,8 +21,6 @@ import {NgIf} from "@angular/common";
 export class RegisterComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
-  authService = inject(AuthService);
-  router = inject(Router);
 
   form = this.fb.nonNullable.group({
     username: ['', Validators.required],
