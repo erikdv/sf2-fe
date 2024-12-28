@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import {Component, EventEmitter, inject, Input, Output, output} from '@angular/core';
+import {Component, OnInit, EventEmitter, inject, Input, Output} from '@angular/core';
 import {FormBuilder, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
 import {RouterLink} from '@angular/router';
-import {AuthResponseInterface} from "../authresponse.interface";
+import {AuthResponseInterface} from "../interface/authresponse.interface";
 import {NgIf} from "@angular/common";
 
 @Component({
@@ -36,10 +36,12 @@ export class LoginComponent {
         {
           username: this.form.getRawValue().username,
           password: this.form.getRawValue().password
-        }
+        },
+        { withCredentials: true }
       )
       .subscribe((response: AuthResponseInterface) => {
-        localStorage.setItem('accessToken', response.accessToken);
-      })
+        document.cookie = `username=${response.username}`;
+        document.cookie = `sessionExpirationTime=${response.sessionExpirationTime.toString()}`;
+      });
   }
 }

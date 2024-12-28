@@ -2,7 +2,7 @@ import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from "@angular/forms";
 import {HttpClient} from "@angular/common/http";
 import {RouterLink} from "@angular/router";
-import {AuthResponseInterface} from "../authresponse.interface";
+import {AuthResponseInterface} from "../interface/authresponse.interface";
 import {NgIf} from "@angular/common";
 
 
@@ -43,7 +43,8 @@ export class RegisterComponent {
         }
       )
       .subscribe((response: AuthResponseInterface) => {
-        localStorage.setItem('accessToken', response.accessToken);
-      })
+        document.cookie = `username=${response.username}`;
+        document.cookie = `sessionExpirationTime=${response.sessionExpirationTime.toString()}`;
+      });
   }
 }

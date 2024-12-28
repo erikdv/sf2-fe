@@ -6,20 +6,19 @@
     (select)="onSelectLogin($event)"
     [showLoginFields]="showLogin"
     id="login"
-    *ngIf="!authServive.isLoggedIn()">
-    [showLoginFields]="showLoginFields"
+    *ngIf="!sessionService.isLoggedIn()">
   </app-login>
   <app-register
     (select)="onSelectRegister($event)"
     [showRegisterFields]="showRegister"
     id="register"
-    *ngIf="!authServive.isLoggedIn()">
+    *ngIf="!sessionService.isLoggedIn()">
   </app-register>
   <app-logout
-    id="logout" *ngIf="authServive.isLoggedIn()">
+    id="logout" *ngIf="sessionService.isLoggedIn()">
   </app-logout>
   <app-send
-    *ngIf="authServive.isLoggedIn()">
+    *ngIf="sessionService.isLoggedIn()">
   </app-send>
 </div>
 <div id="messageList">
