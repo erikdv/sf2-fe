@@ -3,13 +3,13 @@
 </div>
 <div id="topBar">
   <app-login
-    (select)="onSelectLogin($event)"
+    (select)="onSelectLogin()"
     [showLoginFields]="showLogin"
     id="login"
     *ngIf="!sessionService.isLoggedIn()">
   </app-login>
   <app-register
-    (select)="onSelectRegister($event)"
+    (select)="onSelectRegister()"
     [showRegisterFields]="showRegister"
     id="register"
     *ngIf="!sessionService.isLoggedIn()">
