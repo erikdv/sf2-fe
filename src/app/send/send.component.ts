@@ -1,7 +1,7 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import {HttpClient} from '@angular/common/http';
+import {Component, inject} from '@angular/core';
+import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-send',
@@ -13,7 +13,6 @@ import { Router } from '@angular/router';
 export class SendComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
-  router = inject(Router);
 
   form = this.fb.nonNullable.group({
     content: ['', Validators.required],
@@ -21,19 +20,16 @@ export class SendComponent {
   });
 
   onSubmit(): void {
-    const token = localStorage.getItem('accessToken');
-    const headers = { 'Authorization': `Bearer ${token}` }
+
     this.http
       .post(
         '/api/message',
-
         {
           title: this.form.getRawValue().title,
           content: this.form.getRawValue().content
-        },
-{ headers }
+        }
       )
-      .subscribe( () => {
+      .subscribe(() => {
         window.location.reload()
       })
   }
