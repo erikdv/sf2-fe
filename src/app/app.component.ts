@@ -24,12 +24,12 @@ export class AppComponent {
   showLogin = false
   showRegister = false
 
-  onSelectRegister(register: boolean) {
+  onSelectRegister() {
     this.showRegister = true
     this.showLogin = false
   }
 
-  onSelectLogin(login: boolean) {
+  onSelectLogin() {
     this.showLogin = true
     this.showRegister = false
   }
