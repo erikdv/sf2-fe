@@ -42,6 +42,7 @@ export class LoginComponent {
       .subscribe((response: AuthResponseInterface) => {
         document.cookie = `username=${response.username}`;
         document.cookie = `sessionExpirationTime=${response.sessionExpirationTime.toString()}`;
+        document.cookie = `sessionRefreshExpirationTime=${response.sessionRefreshExpirationTime.toString()}`;
       });
   }
 }
