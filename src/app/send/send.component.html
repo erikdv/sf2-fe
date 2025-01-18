@@ -1,16 +1,26 @@
 <h2>Leave a message!</h2>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div>
-    <p>message title</p>
-    <input id="title" type="text" placeholder="Title" formControlName="title" />
-  </div>
-  <div>
-    <p>message content</p>
-
-    <textarea id="content"  rows="4" cols="50" placeholder="Content" formControlName="content"></textarea>
-  </div>
-  <div>
-    <button class="button" type="submit">Send it!</button>
+  <div id="wrapperNewMessage">
+    <input id="inputTitle" type="text" placeholder="Title" formControlName="title"/>
+    <div>
+      <textarea id="inputContent" rows="4" cols="50" placeholder="Content" formControlName="content"></textarea>
+    </div>
+    <div id="wrapperCategory">
+      <div id="textCategory">
+        Categorie:
+      </div>
+      <div id="selectCategory" class="custom-select">
+        <select class="categoriesDropDown" #item (change)="onSelected(item.value)" id="category" name="category"
+                formControlName="category">
+          <option id="dropDownItemCategories" *ngFor="let category of categories" value="{{category.slug}}">{{ category.title }}</option>
+        </select>
+      </div>
+    </div>
+    <div>
+      <button class="button" type="submit">Send it!</button>
+    </div>
   </div>
 </form>
+
+
 

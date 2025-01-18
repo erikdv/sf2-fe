@@ -9,6 +9,7 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   font-size: large;
+  border-radius: 4px;
 }
 
 #title-link{
@@ -26,8 +27,9 @@
   font-size: small;
   float: right;
   text-align: center;
-  background: #edfffa;
+  background: #f0fafa;
   width: 20ch;
+  border-radius: 10px;
 }
 
 #author{

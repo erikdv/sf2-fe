@@ -6,14 +6,68 @@ p {
   color: darkslateblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-#title {
-  height: 20px;
-  border: 1px solid aquamarine;
+div {
+  color: darkslateblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#content {
-  border: 1px solid aquamarine;
+#wrapperNewMessage {
+  width: 540px;
+  border: 2px solid darkslateblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #f0fafa;
+  border-radius: 10px;
+}
+
+#wrapperCategory {
+  margin: 10px;
+  height: fit-content;
+  width: 500px;
+  overflow: hidden;
+}
+#textCategory {
+  width: 100px;
+  float:left; /* add this */
+}
+#selectCategory {
+  overflow: hidden;
+}
+
+#dropDownCategories {
+  width: 200px;
+}
+
+.custom-select select {
+  width: 60%;
+  padding: 4px;
+  border: 1px solid #caced1;
+  border-radius: 0.25rem;
+  color: darkslateblue;
+}
+
+select.categoriesDropDown {
+  width: 300px;
+}
+
+#dropDownItemCategories {
+  text-align: center;
+  color: darkslateblue;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#inputTitle {
+  margin: 10px;
+  height: 20px;
+  width: 80%;
+  border: 1px solid #dbf1eb;
+}
+
+#inputContent {
+  border: 1px solid #dbf1eb;
+  width: 80%;
+  margin: 10px;
+  height: 200px;
 }
 
 .button {
@@ -25,4 +79,7 @@ p {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 10px;
+  border-radius: 6px;
+
 }

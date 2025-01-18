@@ -46,17 +46,24 @@
 
 #login {
   float: left;
-  width: 50%;
+  width: 40%;
   padding: 10px;
   }
 
 #register {
-  float: left;
-  width: 50%;
+  float: right;
+  width: 40%;
   padding: 10px;
 }
 #logout{
   float: right;
+}
+
+#sendMessage {
+  clear: both;
+  width: 100%;
+  margin: auto;
+  align-self: center;
 }
 
 #messageList {
@@ -72,4 +79,18 @@
     margin: auto;}
 }
 
+@media only screen and (min-width: 992px) {
+  #categories {
+    clear: both;
+    width: 60%;
+    margin: auto;
+    min-height: 40px;
+  }
+}
+
+#categories {
+  width: 60%;
+  margin: auto;
+  min-height: 40px;
+}
 

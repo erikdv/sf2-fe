@@ -9,11 +9,12 @@ import {SendComponent} from "./send/send.component";
 import {RegisterComponent} from "./register/register.component";
 import {LogoutComponent} from "./logout/logout.component";
 import { CookieService } from 'ngx-cookie-service';
+import {CategoriesComponent} from "./categories/categories.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, MessagesComponent, LoginComponent, NgIf, CommonModule, SendComponent, RegisterComponent, LogoutComponent],
+  imports: [RouterOutlet, HeaderComponent, MessagesComponent, LoginComponent, NgIf, CommonModule, SendComponent, RegisterComponent, LogoutComponent, CategoriesComponent],
   providers: [CookieService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

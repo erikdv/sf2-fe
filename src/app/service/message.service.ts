@@ -12,7 +12,7 @@ interface Message {
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class MessageService {
   apiUrl = '/api/messages';
 
   constructor(private http: HttpClient) {}

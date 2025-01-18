@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataService } from '../service/data.service';
+import { MessageService } from '../service/message.service';
 import { Message} from "./models/message";
 import {NgForOf} from "@angular/common";
 import {MessageComponent} from "../message/message.component";
@@ -18,7 +18,7 @@ export class MessagesComponent {
   messages: Message[] = [];
   errorMessage!: string;
 
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: MessageService) {}
 
   ngOnInit() {
     this.dataService.getAllMessages().subscribe({
