@@ -31,7 +31,7 @@ export class RegisterComponent {
 
   onRegisterClick(): void {
       this.select.emit(true)
-      this.showRegisterFields = true;
+      this.showRegisterFields = ! this.showRegisterFields;
   }
   onSubmit(): void {
     this.http

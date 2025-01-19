@@ -6,6 +6,16 @@ p {
   color: darkslateblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+a {
+  color: darkslateblue;
+  background: #dbf1eb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  font-size: x-large;
+  border-radius: 6px;
+}
+
 div {
   color: darkslateblue;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -83,3 +93,5 @@ select.categoriesDropDown {
   border-radius: 6px;
 
 }
+
+

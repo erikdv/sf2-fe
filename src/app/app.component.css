@@ -36,28 +36,6 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
-  #login {
-    margin: auto;
-    width: 20%;
-    padding: 10px;
-  }
-}
-
-#login {
-  float: left;
-  width: 40%;
-  padding: 10px;
-  }
-
-#register {
-  float: right;
-  width: 40%;
-  padding: 10px;
-}
-#logout{
-  float: right;
-}
 
 #sendMessage {
   clear: both;
@@ -85,12 +63,7 @@
     width: 60%;
     margin: auto;
     min-height: 40px;
+    margin-top: 20px;
   }
-}
-
-#categories {
-  width: 60%;
-  margin: auto;
-  min-height: 40px;
 }
 

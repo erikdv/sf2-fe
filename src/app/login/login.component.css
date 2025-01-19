@@ -17,11 +17,14 @@ a {
 #username {
   height: 20px;
   border: 1px solid aquamarine;
+  border-radius: 4px;
 }
 
 #password {
   height: 20px;
   border: 1px solid aquamarine;
+  border-radius: 4px;
+
 }
 
 .button {
@@ -33,4 +36,6 @@ a {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border-radius: 10px;
+
 }

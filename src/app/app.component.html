@@ -2,32 +2,11 @@
   <app-header></app-header>
 </div>
 <div id="topBar">
-  <div *ngIf="!sessionService.isLoggedIn()" id="login">
-    <app-login
-      (select)="onSelectLogin()"
-      [showLoginFields]="showLogin"
-      >
-    </app-login>
-  </div>
-  <div *ngIf="!sessionService.isLoggedIn()" id="register">
-    <app-register
-      (select)="onSelectRegister()"
-      [showRegisterFields]="showRegister">
-    </app-register>
-  </div>
-  <div id="logout">
-    <app-logout
-      *ngIf="sessionService.isLoggedIn()">
-    </app-logout>
-  </div>
-  <div id="sendMessage">
-    <app-send
-      *ngIf="sessionService.isLoggedIn()">
-    </app-send>
-  </div>
+<app-topbar></app-topbar>
 </div>
 
 <div id="categories">
+  <hr>
   <app-categories></app-categories>
 </div>
 <div id="messageList">

@@ -10,28 +10,17 @@ import {RegisterComponent} from "./register/register.component";
 import {LogoutComponent} from "./logout/logout.component";
 import { CookieService } from 'ngx-cookie-service';
 import {CategoriesComponent} from "./categories/categories.component";
+import {TopbarComponent} from "./topbar/topbar.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, MessagesComponent, LoginComponent, NgIf, CommonModule, SendComponent, RegisterComponent, LogoutComponent, CategoriesComponent],
+  imports: [RouterOutlet, HeaderComponent, MessagesComponent, LoginComponent, NgIf, CommonModule, SendComponent, RegisterComponent, LogoutComponent, CategoriesComponent, TopbarComponent],
   providers: [CookieService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  sessionService = inject(SessionService);
   title = 'sf2-fe';
-  showLogin = false
-  showRegister = false
 
-  onSelectRegister() {
-    this.showRegister = true
-    this.showLogin = false
-  }
-
-  onSelectLogin() {
-    this.showLogin = true
-    this.showRegister = false
-  }
 }

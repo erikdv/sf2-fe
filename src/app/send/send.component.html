@@ -1,5 +1,5 @@
-<h2>Leave a message!</h2>
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<a routerLink="/" (click)="showForm();">Leave a message!</a>
+<form [formGroup]="form" (ngSubmit)="onSubmit()" *ngIf="showNewMessageForm">
   <div id="wrapperNewMessage">
     <input id="inputTitle" type="text" placeholder="Title" formControlName="title"/>
     <div>

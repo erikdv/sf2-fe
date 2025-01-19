@@ -3,14 +3,15 @@ import {Component, inject} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Category} from "../categories/models/category";
 import {CategoryService} from "../service/category.service";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgIf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-send',
   templateUrl: './send.component.html',
   styleUrls: ['./send.component.css'],
   standalone: true,
-  imports: [ReactiveFormsModule, NgForOf],
+  imports: [ReactiveFormsModule, NgForOf, RouterLink, NgIf],
 })
 export class SendComponent {
   fb = inject(FormBuilder);
@@ -24,6 +25,7 @@ export class SendComponent {
 
   categories : Category[] = [];
   errorMessage!: string;
+  showNewMessageForm : boolean = false
 
   constructor(private dataService:CategoryService) {}
 
@@ -50,6 +52,10 @@ export class SendComponent {
       .subscribe(() => {
         window.location.reload()
       })
+  }
+
+  showForm() {
+    this.showNewMessageForm = ! this.showNewMessageForm
   }
 
   private getCategories() {
