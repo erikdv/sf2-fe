@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import {Category} from "../messages-categories/categories/models/category";
 
 interface Message {
   title: string;
@@ -17,7 +18,11 @@ export class MessageService {
 
   constructor(private http: HttpClient) {}
 
-  getAllMessages(): Observable<Message[]> {
-    return this.http.get<Message[]>(this.apiUrl);
+  getMessages(slug: String): Observable<Message[]> {
+    if (slug === "all") {
+      return this.http.get<Message[]>(this.apiUrl);
+    } else {
+      return this.http.get<Message[]>(this.apiUrl + "?slug=" + slug);
+    }
   }
 }

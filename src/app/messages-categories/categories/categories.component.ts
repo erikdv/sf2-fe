@@ -1,25 +1,34 @@
-import { Component } from '@angular/core';
-import {CategoryService} from "../service/category.service";
+import {Component, EventEmitter, Output} from '@angular/core';
+import {CategoryService} from "../../service/category.service";
 import {Category} from "./models/category";
 import {MessageComponent} from "../message/message.component";
 import {NgForOf} from "@angular/common";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-categories',
   standalone: true,
   imports: [
     MessageComponent,
-    NgForOf
+    NgForOf,
+    RouterLink
   ],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
+  @Output() responseEvent = new EventEmitter<string>();
 
   categories : Category[] = [];
   errorMessage!: string;
+  selectedCategory: string = "all"
 
   constructor(private dataService:CategoryService) {}
+
+  selectCategory(category: string) {
+    this.selectedCategory = category
+    console.log(this.selectedCategory)
+  }
 
   ngOnInit() {
     this.dataService.getAllCategories().subscribe({

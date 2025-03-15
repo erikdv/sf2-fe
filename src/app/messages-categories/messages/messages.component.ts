@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MessageService } from '../service/message.service';
+import { MessageService } from '../../service/message.service';
 import { Message} from "./models/message";
 import {NgForOf} from "@angular/common";
 import {MessageComponent} from "../message/message.component";
@@ -21,7 +21,7 @@ export class MessagesComponent {
   constructor(private dataService: MessageService) {}
 
   ngOnInit() {
-    this.dataService.getAllMessages().subscribe({
+    this.dataService.getMessages("materiaal").subscribe({
       next: (messages) => {
         this.messages = messages.sort((a, b) => {
           return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();

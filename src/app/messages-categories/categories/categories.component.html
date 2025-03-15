@@ -1,0 +1,7 @@
+
+  <div *ngFor="let category of categories" id="category">
+    <a routerLink="/" (click)="selectCategory(category.slug)" class="fill-div">
+      {{ category.title }}
+    </a>
+  </div>
+

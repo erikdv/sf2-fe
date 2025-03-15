@@ -1,7 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import {Component, inject} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
-import {Category} from "../categories/models/category";
+import {Category} from "../messages-categories/categories/models/category";
 import {CategoryService} from "../service/category.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
