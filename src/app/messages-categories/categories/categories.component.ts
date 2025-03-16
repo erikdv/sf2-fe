@@ -6,16 +6,15 @@ import {NgForOf, NgStyle} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-categories',
-  standalone: true,
-  imports: [
-    MessageComponent,
-    NgForOf,
-    RouterLink,
-    NgStyle
-  ],
-  templateUrl: './categories.component.html',
-  styleUrl: './categories.component.css'
+    selector: 'app-categories',
+    imports: [
+        MessageComponent,
+        NgForOf,
+        RouterLink,
+        NgStyle
+    ],
+    templateUrl: './categories.component.html',
+    styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
   @Output() categorySelectedEvent = new EventEmitter<string>();

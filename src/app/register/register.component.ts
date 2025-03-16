@@ -7,15 +7,14 @@ import {NgIf} from "@angular/common";
 
 
 @Component({
-  selector: 'app-register',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    RouterLink,
-    NgIf
-  ],
-  templateUrl: './register.component.html',
-  styleUrl: './register.component.css'
+    selector: 'app-register',
+    imports: [
+        ReactiveFormsModule,
+        RouterLink,
+        NgIf
+    ],
+    templateUrl: './register.component.html',
+    styleUrl: './register.component.css'
 })
 export class RegisterComponent {
   @Input({required: true}) showRegisterFields!: boolean;
