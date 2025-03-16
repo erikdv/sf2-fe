@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Message} from "./models/message";
-import {formatDate, NgIf} from "@angular/common";
+import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
 @Component({

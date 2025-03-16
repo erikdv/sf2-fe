@@ -2,6 +2,7 @@
 h1 {
   color: darkslateblue;
   text-align: center;
-  background: aquamarine;
+  background: #dbf1eb;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px;
 }

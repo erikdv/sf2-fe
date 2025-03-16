@@ -15,8 +15,8 @@ import {NgIf} from "@angular/common";
 export class LoginComponent {
   fb = inject(FormBuilder);
   http = inject(HttpClient);
-  @Input({required: true}) showLoginFields!: boolean;
-  @Output() select = new EventEmitter()
+  @Input({required: true}) showLoginFields!: boolean ;
+  @Output() select = new EventEmitter();
 
 
   form = this.fb.nonNullable.group({
@@ -26,7 +26,7 @@ export class LoginComponent {
 
   onLoginClick(): void {
       this.select.emit(true)
-      this.showLoginFields = true;
+      this.showLoginFields = ! this.showLoginFields;
   }
 
   onSubmit(): void {

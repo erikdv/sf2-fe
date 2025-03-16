@@ -1,0 +1,9 @@
+<div id="categories">
+  <hr>
+  <app-all-messages-button [selectedCategory]="activeCategory" (categorySelectedEvent)="receiveCategoryEvent($event)"></app-all-messages-button>
+  <app-categories [selectedCategory]="activeCategory" (categorySelectedEvent)="receiveCategoryEvent($event)"></app-categories>
+</div>
+<div id="messageList">
+  <app-messages [selectedCategory]="activeCategory" ></app-messages>
+</div>
+

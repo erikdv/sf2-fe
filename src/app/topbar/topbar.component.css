@@ -1,0 +1,17 @@
+
+
+#login {
+  float: left;
+}
+
+#register {
+  float: right;
+}
+
+#sendMessage{
+  float: left;
+}
+
+#logout{
+  float: right;
+}

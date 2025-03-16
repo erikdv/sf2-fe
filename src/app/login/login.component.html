@@ -1,4 +1,4 @@
-<a routerLink="/" (click)="onLoginClick();">Login</a>
+<a routerLink="/" (click)="onLoginClick();">&nbsp;Login&nbsp;</a>
 <form *ngIf="showLoginFields" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div>
     <input id="username" type="text" placeholder="Username" formControlName="username" />

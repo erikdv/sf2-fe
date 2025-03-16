@@ -12,12 +12,16 @@ interface Message {
 @Injectable({
   providedIn: 'root',
 })
-export class DataService {
+export class MessageService {
   apiUrl = '/api/messages';
 
   constructor(private http: HttpClient) {}
 
-  getAllMessages(): Observable<Message[]> {
-    return this.http.get<Message[]>(this.apiUrl);
+  getMessages(slug: String): Observable<Message[]> {
+    if (slug === "all") {
+      return this.http.get<Message[]>(this.apiUrl);
+    } else {
+      return this.http.get<Message[]>(this.apiUrl + "?slug=" + slug);
+    }
   }
 }
