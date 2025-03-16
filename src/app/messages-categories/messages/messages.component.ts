@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {Component, Input, SimpleChanges} from '@angular/core';
 import {MessageService} from '../../service/message.service';
 import {Message} from "./models/message";
 import {NgForOf} from "@angular/common";

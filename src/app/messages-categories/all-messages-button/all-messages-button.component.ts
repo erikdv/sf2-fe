@@ -1,5 +1,4 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {CategoryService} from "../../service/category.service";
 
 @Component({
   selector: 'app-all-messages-button',
