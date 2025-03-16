@@ -1,0 +1,29 @@
+a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  font-size: x-large;
+  text-align: center;}
+
+div {
+  color: darkslateblue;
+  background: #dbf1eb;
+  width: 160px;
+  margin-right: 10px;
+  display: inline-block;
+  border-radius: 10px;
+  align-content: center;
+
+
+}
+
+a {
+  color: darkslateblue;
+  background: #dbf1eb;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  font-size: x-large;
+  border-radius: 4px;
+}

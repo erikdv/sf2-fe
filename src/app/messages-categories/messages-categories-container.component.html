@@ -1,5 +1,6 @@
 <div id="categories">
   <hr>
+  <app-all-messages-button (categorySelectedEvent)="receiveCategoryEvent($event)"></app-all-messages-button>
   <app-categories (categorySelectedEvent)="receiveCategoryEvent($event)"></app-categories>
 </div>
 <div id="messageList">
