@@ -26,6 +26,7 @@ export class SendComponent {
   categories : Category[] = [];
   errorMessage!: string;
   showNewMessageForm : boolean = false
+  selectedCategory = '';
 
   constructor(private dataService:CategoryService) {}
 
@@ -33,7 +34,6 @@ export class SendComponent {
     this.getCategories();
   }
 
-  selectedCategory = 'option2';
   onSelected(value:string): void {
     this.selectedCategory = value;
   }
