@@ -1,7 +1,8 @@
 <div id="categories">
   <hr>
-  <app-categories></app-categories>
+  <app-categories (categoryEvent)="receiveCategoryEvent($event)"></app-categories>
 </div>
 <div id="messageList">
-  <app-messages></app-messages>
+  <app-messages [categorySlug]="activeCategory" ></app-messages>
 </div>
+

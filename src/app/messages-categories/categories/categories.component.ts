@@ -17,7 +17,7 @@ import {RouterLink} from "@angular/router";
   styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
-  @Output() responseEvent = new EventEmitter<string>();
+  @Output() categoryEvent = new EventEmitter<string>();
 
   categories : Category[] = [];
   errorMessage!: string;
@@ -27,6 +27,7 @@ export class CategoriesComponent {
 
   selectCategory(category: string) {
     this.selectedCategory = category
+    this.categoryEvent.emit(this.selectedCategory);
     console.log(this.selectedCategory)
   }
 

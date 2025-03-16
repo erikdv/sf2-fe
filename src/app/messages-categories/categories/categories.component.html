@@ -1,6 +1,6 @@
 
   <div *ngFor="let category of categories" id="category">
-    <a routerLink="/" (click)="selectCategory(category.slug)" class="fill-div">
+    <a href="#" (click)="selectCategory(category.slug); $event.preventDefault()" class="fill-div">
       {{ category.title }}
     </a>
   </div>

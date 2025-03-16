@@ -36,7 +36,6 @@
   }
 }
 
-
 #sendMessage {
   clear: both;
   width: 100%;
@@ -44,26 +43,5 @@
   align-self: center;
 }
 
-#messageList {
-  clear: both;
-  width: 100%;
-  margin: auto;
-}
 
-@media only screen and (min-width: 992px) {
-  #messageList {
-    clear: both;
-    width: 60%;
-    margin: auto;}
-}
-
-@media only screen and (min-width: 992px) {
-  #categories {
-    clear: both;
-    width: 60%;
-    margin: auto;
-    min-height: 40px;
-    margin-top: 20px;
-  }
-}
 
