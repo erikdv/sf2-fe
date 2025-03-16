@@ -11,24 +11,25 @@ import { CookieService } from 'ngx-cookie-service';
 import {CategoriesComponent} from "./messages-categories/categories/categories.component";
 import {TopbarComponent} from "./topbar/topbar.component";
 import {MessagesCategoriesContainerComponent} from "./messages-categories/messages-categories-container.component";
+import {provideMarkdown} from "ngx-markdown";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    MessagesComponent,
-    LoginComponent,
-    NgIf,
-    CommonModule,
-    SendComponent,
-    RegisterComponent,
-    LogoutComponent,
-    CategoriesComponent,
-    TopbarComponent,
-    MessagesCategoriesContainerComponent],
-  providers: [CookieService],
+  standalone: true,  imports: [
+        RouterOutlet,
+        HeaderComponent,
+        MessagesComponent,
+        LoginComponent,
+        NgIf,
+        CommonModule,
+        SendComponent,
+        RegisterComponent,
+        LogoutComponent,
+        CategoriesComponent,
+        TopbarComponent,
+        MessagesCategoriesContainerComponent,
+    ],
+    providers: [CookieService, provideMarkdown()],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
