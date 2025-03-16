@@ -1,4 +1,5 @@
-<div>
+<div [ngStyle]="{'border': '2px solid', 'border-color': selectedCategory === 'all' ? '#73c7af' : '#dbf1eb'}" >
+
   <a href="#" (click)="selectCategory('all'); $event.preventDefault()" class="fill-div">
     All
   </a>

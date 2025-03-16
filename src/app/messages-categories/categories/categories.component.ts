@@ -1,8 +1,8 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {CategoryService} from "../../service/category.service";
 import {Category} from "./models/category";
 import {MessageComponent} from "../message/message.component";
-import {NgForOf} from "@angular/common";
+import {NgForOf, NgStyle} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
 @Component({
@@ -11,7 +11,8 @@ import {RouterLink} from "@angular/router";
   imports: [
     MessageComponent,
     NgForOf,
-    RouterLink
+    RouterLink,
+    NgStyle
   ],
   templateUrl: './categories.component.html',
   styleUrl: './categories.component.css'
@@ -21,7 +22,7 @@ export class CategoriesComponent {
 
   categories : Category[] = [];
   errorMessage!: string;
-  selectedCategory: string = "all"
+  @Input() selectedCategory!: string;
 
   constructor(private dataService:CategoryService) {}
 

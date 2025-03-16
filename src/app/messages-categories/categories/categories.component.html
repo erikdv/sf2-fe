@@ -1,6 +1,7 @@
 
   <div *ngFor="let category of categories" id="category">
-    <a href="#" (click)="selectCategory(category.slug); $event.preventDefault()" class="fill-div">
+    <a href="#" (click)="selectCategory(category.slug); $event.preventDefault()" class="fill-div"
+       [ngStyle]="{'border': '2px solid', 'border-color': selectedCategory === category.slug ? '#73c7af' : '#dbf1eb'}">
       {{ category.title }}
     </a>
   </div>

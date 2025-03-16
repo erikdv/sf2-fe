@@ -15,7 +15,7 @@ import {AllMessagesButtonComponent} from "./all-messages-button/all-messages-but
   styleUrl: './messages-categories-container.component.css'
 })
 export class MessagesCategoriesContainerComponent {
-  activeCategory = ''
+  activeCategory = 'all'
 
   receiveCategoryEvent(event: string) {
     this.activeCategory = event
