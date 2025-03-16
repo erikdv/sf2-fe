@@ -7,8 +7,7 @@ import {SendComponent} from "../send/send.component";
 import {SessionService} from "../service/session.service";
 
 @Component({
-  selector: 'app-topbar',
-  standalone: true,
+    selector: 'app-topbar',
     imports: [
         LoginComponent,
         LogoutComponent,
@@ -16,8 +15,8 @@ import {SessionService} from "../service/session.service";
         RegisterComponent,
         SendComponent
     ],
-  templateUrl: './topbar.component.html',
-  styleUrl: './topbar.component.css'
+    templateUrl: './topbar.component.html',
+    styleUrl: './topbar.component.css'
 })
 export class TopbarComponent {
   sessionService = inject(SessionService);

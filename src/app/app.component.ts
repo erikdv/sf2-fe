@@ -13,24 +13,24 @@ import {TopbarComponent} from "./topbar/topbar.component";
 import {MessagesCategoriesContainerComponent} from "./messages-categories/messages-categories-container.component";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    HeaderComponent,
-    MessagesComponent,
-    LoginComponent,
-    NgIf,
-    CommonModule,
-    SendComponent,
-    RegisterComponent,
-    LogoutComponent,
-    CategoriesComponent,
-    TopbarComponent,
-    MessagesCategoriesContainerComponent],
-  providers: [CookieService],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    selector: 'app-root',
+    imports: [
+        RouterOutlet,
+        HeaderComponent,
+        MessagesComponent,
+        LoginComponent,
+        NgIf,
+        CommonModule,
+        SendComponent,
+        RegisterComponent,
+        LogoutComponent,
+        CategoriesComponent,
+        TopbarComponent,
+        MessagesCategoriesContainerComponent
+    ],
+    providers: [CookieService],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'sf2-fe';

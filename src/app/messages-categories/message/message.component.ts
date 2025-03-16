@@ -4,14 +4,13 @@ import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 
 @Component({
-  selector: 'app-message',
-  standalone: true,
-  imports: [
-    RouterLink,
-    NgIf
-  ],
-  templateUrl: './message.component.html',
-  styleUrl: './message.component.css'
+    selector: 'app-message',
+    imports: [
+        RouterLink,
+        NgIf
+    ],
+    templateUrl: './message.component.html',
+    styleUrl: './message.component.css'
 })
 export class MessageComponent {
   @Input() message: Message | undefined;
