@@ -13,10 +13,6 @@ export class AllMessagesButtonComponent {
   selectedCategory: string = "all"
   @Output() categorySelectedEvent = new EventEmitter<string>();
 
-  constructor(private dataService:CategoryService) {}
-
-
-
   selectCategory(category: string) {
     this.selectedCategory = category
     this.categorySelectedEvent.emit(this.selectedCategory);

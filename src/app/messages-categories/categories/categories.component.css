@@ -5,7 +5,8 @@ a.fill-div {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
   font-size: x-large;
-  text-align: center;}
+  text-align: center;
+}
 
 div {
   color: darkslateblue;
@@ -15,8 +16,6 @@ div {
   display: inline-block;
   border-radius: 10px;
   align-content: center;
-
-
 }
 
 a {

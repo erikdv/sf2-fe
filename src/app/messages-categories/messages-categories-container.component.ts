@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {MessagesComponent} from "./messages/messages.component";
 import {CategoriesComponent} from "./categories/categories.component";
 import {AllMessagesButtonComponent} from "./all-messages-button/all-messages-button.component";
@@ -15,11 +15,9 @@ import {AllMessagesButtonComponent} from "./all-messages-button/all-messages-but
   styleUrl: './messages-categories-container.component.css'
 })
 export class MessagesCategoriesContainerComponent {
-  categorySlug = "materiaal"
   activeCategory = ''
 
   receiveCategoryEvent(event: string) {
     this.activeCategory = event
-    console.log("HERE" + this.activeCategory)
   }
 }

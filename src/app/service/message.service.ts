@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import {Category} from "../messages-categories/categories/models/category";
 
 interface Message {
   title: string;
