@@ -1,10 +1,11 @@
 import {HttpClient} from '@angular/common/http';
-import {Component, inject} from '@angular/core';
+import {Component, EventEmitter, inject, Output} from '@angular/core';
 import {FormBuilder, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Category} from "../messages-categories/categories/models/category";
 import {CategoryService} from "../service/category.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-send',
@@ -28,7 +29,12 @@ export class SendComponent {
   showNewMessageForm : boolean = false
   selectedCategory = '';
 
-  constructor(private dataService:CategoryService) {}
+  constructor(
+    private dataService:CategoryService,
+    private cookieService: CookieService
+  ) {}
+
+  @Output() categorySelectedEvent = new EventEmitter<string>();
 
   ngOnInit() {
     this.getCategories();
@@ -50,6 +56,8 @@ export class SendComponent {
         }
       )
       .subscribe(() => {
+        this.categorySelectedEvent.emit(this.selectedCategory);
+        this.cookieService.set('category', this.selectedCategory, { expires: 7, path: '/' });
         window.location.reload()
       })
   }

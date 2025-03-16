@@ -3,6 +3,7 @@ import {MessageService} from '../../service/message.service';
 import {Message} from "./models/message";
 import {NgForOf} from "@angular/common";
 import {MessageComponent} from "../message/message.component";
+import {CookieService} from "ngx-cookie-service";
 
 @Component({
   selector: 'app-messages',
@@ -17,18 +18,26 @@ import {MessageComponent} from "../message/message.component";
 export class MessagesComponent {
   messages: Message[] = [];
   errorMessage!: string;
-  @Input() categorySlug!: string;
+  @Input() selectedCategory!: string;
 
-  constructor(private dataService: MessageService) {
+  constructor(
+    private dataService: MessageService,
+    private cookieService: CookieService
+  ) {
   }
 
   ngOnInit() {
-    this.getMessages("all")
+    let cookieCategory = this.cookieService.get('category')
+    if (!cookieCategory) {
+      this.getMessages("all")
+    } else {
+      this.getMessages(cookieCategory)
+    }
   }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['categorySlug'] && !changes['categorySlug'].firstChange) {
-      this.getMessages(this.categorySlug);
+    if (changes['selectedCategory'] && !changes['selectedCategory'].firstChange) {
+      this.getMessages(this.selectedCategory);
     }
   }
 
