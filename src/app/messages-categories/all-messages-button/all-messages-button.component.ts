@@ -2,13 +2,12 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {NgStyle} from "@angular/common";
 
 @Component({
-  selector: 'app-all-messages-button',
-  standalone: true,
-  imports: [
-    NgStyle
-  ],
-  templateUrl: './all-messages-button.component.html',
-  styleUrl: './all-messages-button.component.css'
+    selector: 'app-all-messages-button',
+    imports: [
+        NgStyle
+    ],
+    templateUrl: './all-messages-button.component.html',
+    styleUrl: './all-messages-button.component.css'
 })
 export class AllMessagesButtonComponent {
 

@@ -6,14 +6,13 @@ import {MessageComponent} from "../message/message.component";
 import {CookieService} from "ngx-cookie-service";
 
 @Component({
-  selector: 'app-messages',
-  standalone: true,
-  imports: [
-    NgForOf,
-    MessageComponent
-  ],
-  templateUrl: './messages.component.html',
-  styleUrl: './messages.component.css'
+    selector: 'app-messages',
+    imports: [
+        NgForOf,
+        MessageComponent
+    ],
+    templateUrl: './messages.component.html',
+    styleUrl: './messages.component.css'
 })
 export class MessagesComponent {
   messages: Message[] = [];

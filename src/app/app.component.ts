@@ -14,8 +14,8 @@ import {MessagesCategoriesContainerComponent} from "./messages-categories/messag
 import {provideMarkdown} from "ngx-markdown";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,  imports: [
+    selector: 'app-root',
+    imports: [
         RouterOutlet,
         HeaderComponent,
         MessagesComponent,
@@ -30,8 +30,8 @@ import {provideMarkdown} from "ngx-markdown";
         MessagesCategoriesContainerComponent,
     ],
     providers: [CookieService, provideMarkdown()],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'sf2-fe';

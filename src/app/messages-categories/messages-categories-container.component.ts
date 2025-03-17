@@ -4,15 +4,14 @@ import {CategoriesComponent} from "./categories/categories.component";
 import {AllMessagesButtonComponent} from "./all-messages-button/all-messages-button.component";
 
 @Component({
-  selector: 'app-messages-categories',
-  standalone: true,
-  imports: [
-    MessagesComponent,
-    CategoriesComponent,
-    AllMessagesButtonComponent
-  ],
-  templateUrl: './messages-categories-container.component.html',
-  styleUrl: './messages-categories-container.component.css'
+    selector: 'app-messages-categories',
+    imports: [
+        MessagesComponent,
+        CategoriesComponent,
+        AllMessagesButtonComponent
+    ],
+    templateUrl: './messages-categories-container.component.html',
+    styleUrl: './messages-categories-container.component.css'
 })
 export class MessagesCategoriesContainerComponent {
   activeCategory = 'all'

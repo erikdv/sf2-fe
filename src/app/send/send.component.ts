@@ -8,11 +8,10 @@ import {RouterLink} from "@angular/router";
 import { CookieService } from 'ngx-cookie-service';
 
 @Component({
-  selector: 'app-send',
-  templateUrl: './send.component.html',
-  styleUrls: ['./send.component.css'],
-  standalone: true,
-  imports: [ReactiveFormsModule, NgForOf, RouterLink, NgIf],
+    selector: 'app-send',
+    templateUrl: './send.component.html',
+    styleUrls: ['./send.component.css'],
+    imports: [ReactiveFormsModule, NgForOf, RouterLink, NgIf]
 })
 export class SendComponent {
   fb = inject(FormBuilder);

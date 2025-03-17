@@ -6,11 +6,10 @@ import {AuthResponseInterface} from "../interface/authresponse.interface";
 import {NgIf} from "@angular/common";
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  standalone: true,
-  imports: [ReactiveFormsModule, RouterLink, FormsModule, NgIf],
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    imports: [ReactiveFormsModule, RouterLink, FormsModule, NgIf]
 })
 export class LoginComponent {
   fb = inject(FormBuilder);

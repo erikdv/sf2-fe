@@ -5,11 +5,10 @@ import {RouterLink} from "@angular/router";
 import { MarkdownModule } from "ngx-markdown";
 
 @Component({
-  selector: 'app-message',
-  standalone: true,
-  imports: [
-    RouterLink,
-    NgIf,
+    selector: 'app-message',
+    imports: [
+        RouterLink,
+        NgIf,
         MarkdownModule
     ],
     templateUrl: './message.component.html',
