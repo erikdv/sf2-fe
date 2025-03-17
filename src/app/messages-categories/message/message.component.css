@@ -47,3 +47,27 @@ hr {
   background: #edfffa;
   width: 20ch;
 }
+
+::ng-deep markdown p {
+  margin: 0;
+  padding: 0;
+  display: inline; /* Prevents extra spacing */
+}
+
+::ng-deep markdown h1
+{
+  font-size: 1.2rem; /* Adjusts size */
+  font-weight: bold; /* Makes it look like normal text */
+  margin: 0; /* Removes extra spacing */
+}
+::ng-deep markdown h2 {
+  font-size: 1.1rem; /* Adjusts size */
+  font-weight: bold; /* Makes it look like normal text */
+  margin: 0; /* Removes extra spacing */
+}
+
+::ng-deep markdown h3 {
+  font-size: 1rem; /* Adjusts size */
+  font-weight: bold; /* Makes it look like normal text */
+  margin: 0; /* Removes extra spacing */
+}

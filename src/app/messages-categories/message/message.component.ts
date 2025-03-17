@@ -2,12 +2,14 @@ import {Component, Input} from '@angular/core';
 import {Message} from "./models/message";
 import {NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import { MarkdownModule } from "ngx-markdown";
 
 @Component({
     selector: 'app-message',
     imports: [
         RouterLink,
-        NgIf
+        NgIf,
+        MarkdownModule
     ],
     templateUrl: './message.component.html',
     styleUrl: './message.component.css'
