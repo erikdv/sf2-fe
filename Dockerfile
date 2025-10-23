@@ -4,7 +4,7 @@ COPY . .
 RUN npm install
 RUN npm run build -- --base-href=/messages/
 
-FROM nginx:1.25.0-alpine
+FROM nginx:1.26.3-alpine
 
 
 COPY /conf/default.conf /etc/nginx/conf.d/default.conf
