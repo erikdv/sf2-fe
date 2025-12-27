@@ -1,9 +1,7 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {CategoryService} from "../../service/category.service";
 import {Category} from "./models/category";
-import {MessageComponent} from "../message/message.component";
 import {NgForOf, NgStyle} from "@angular/common";
-import {RouterLink} from "@angular/router";
 
 @Component({
     selector: 'app-categories',
