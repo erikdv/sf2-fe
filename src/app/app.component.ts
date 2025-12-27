@@ -16,16 +16,8 @@ import {provideMarkdown} from "ngx-markdown";
 @Component({
     selector: 'app-root',
     imports: [
-        RouterOutlet,
         HeaderComponent,
-        MessagesComponent,
-        LoginComponent,
-        NgIf,
         CommonModule,
-        SendComponent,
-        RegisterComponent,
-        LogoutComponent,
-        CategoriesComponent,
         TopbarComponent,
         MessagesCategoriesContainerComponent,
     ],

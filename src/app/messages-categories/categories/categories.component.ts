@@ -8,9 +8,7 @@ import {RouterLink} from "@angular/router";
 @Component({
     selector: 'app-categories',
     imports: [
-        MessageComponent,
         NgForOf,
-        RouterLink,
         NgStyle
     ],
     templateUrl: './categories.component.html',
