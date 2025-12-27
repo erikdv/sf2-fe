@@ -1,6 +1,6 @@
-import {Component, inject} from '@angular/core';
+import {Component} from '@angular/core';
 import { HeaderComponent} from "./header/header.component";
-import {NgIf, CommonModule} from "@angular/common";
+import {CommonModule} from "@angular/common";
 import { CookieService } from 'ngx-cookie-service';
 import {TopbarComponent} from "./topbar/topbar.component";
 import {MessagesCategoriesContainerComponent} from "./messages-categories/messages-categories-container.component";
