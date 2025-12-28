@@ -1,15 +1,42 @@
 <div id="message">
   <hr>
-  <div  id="title">
-    <a  id="title-link" routerLink="/" (click)="showMessageContent();">{{ message?.title }}</a>
+  <div id="title">
+    <a id="title-link" routerLink="/" (click)="showMessageContent();">{{ message?.title }}</a>
   </div>
   <div *ngIf="showContent" id="content">
-    <markdown [data]="message?.content">></markdown>
+    <markdown [data]="message?.content"></markdown>
   </div>
-  <div id="author">
-    {{ message?.author }}
-  </div>
-  <div id="createdAt">
-    {{ message ? formatDate(message.createdAt) : "-" }}
+  <div id="author">{{ message?.author }}</div>
+  <div id="createdAt">{{ message ? formatDate(message.createdAt) : '-' }}</div>
+
+  <!-- Comments section -->
+  <div *ngIf="message?.id" class="comments">
+    <button type="button" (click)="toggleComments()">
+      {{ commentsVisible ? 'Hide' : 'Show' }} comments
+      <span *ngIf="commentCount !== null">({{ commentCount }})</span>
+    </button>
+
+    <div *ngIf="commentsVisible" class="comments-body">
+      <div class="comment-meta" *ngIf="loadingComments">Loading comments...</div>
+      <div class="comment-meta" *ngIf="!loadingComments && comments.length === 0">No comments yet.</div>
+
+      <ul *ngIf="!loadingComments && comments.length > 0">
+        <li *ngFor="let c of comments">
+          <div class="comment-meta">
+            <strong>{{ c.author || 'Anonymous' }}</strong>
+            <span *ngIf="c.createdAt"> • {{ formatDate(c.createdAt) }}</span>
+          </div>
+          <div class="comment-content">{{ c.content }}</div>
+        </li>
+      </ul>
+
+      <div class="add-comment">
+        <textarea [(ngModel)]="newComment" rows="3" placeholder="Add a comment..."></textarea>
+        <div>
+          <button type="button" (click)="submitComment()" [disabled]="posting || !newComment.trim()">Post</button>
+        </div>
+        <div class="error" *ngIf="error">{{ error }}</div>
+      </div>
+    </div>
   </div>
 </div>

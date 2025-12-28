@@ -71,3 +71,97 @@ hr {
   font-weight: bold; /* Makes it look like normal text */
   margin: 0; /* Removes extra spacing */
 }
+
+.comments {
+  margin-top: 8px;
+  background: #f0fafa;
+  border: 1px solid #70d7db;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.comments > button {
+  background: #dbf1eb;
+  color: darkslateblue;
+  border: 1px solid #70d7db;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.comments > button:hover {
+  background: #c9ebe3;
+}
+
+.comments-body {
+  margin-top: 8px;
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.comments-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.comments-body li {
+  border: 1px solid #e1f2f4;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #ffffff;
+}
+
+.comment-meta {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8rem;
+  color: darkslateblue;
+  background: #edfffa;
+  border-radius: 10px;
+  padding: 2px 8px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.comment-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkslateblue;
+}
+
+.add-comment {
+  margin-top: 10px;
+}
+.add-comment textarea {
+  width: 100%;
+  min-height: 72px;
+  border: 1px solid #70d7db;
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: darkslateblue;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.add-comment button {
+  margin-top: 6px;
+  background: #dbf1eb;
+  color: darkslateblue;
+  border: 1px solid #70d7db;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+}
+.add-comment button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 6px;
+  color: #b00020;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.85rem;
+}
