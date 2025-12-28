@@ -6,6 +6,7 @@ import {CategoryService} from "../service/category.service";
 import {NgForOf, NgIf} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import { CookieService } from 'ngx-cookie-service';
+import { MessageEventsService } from "../service/message-events.service";
 
 @Component({
     selector: 'app-send',
@@ -30,7 +31,8 @@ export class SendComponent {
 
   constructor(
     private dataService:CategoryService,
-    private cookieService: CookieService
+    private cookieService: CookieService,
+    private messageEvents: MessageEventsService
   ) {}
 
   @Output() categorySelectedEvent = new EventEmitter<string>();
@@ -57,7 +59,9 @@ export class SendComponent {
       .subscribe(() => {
         this.categorySelectedEvent.emit(this.selectedCategory);
         this.cookieService.set('category', this.selectedCategory, { expires: 7, path: '/' });
-        window.location.reload()
+        this.messageEvents.notifyMessagePosted();
+        this.form.reset({ title: '', content: '', category: '' });
+        this.showNewMessageForm = false;
       })
   }
 
